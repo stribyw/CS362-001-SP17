@@ -84,7 +84,7 @@ public class UrlValidatorTest extends TestCase {
     * @param testObjects Used to create a url.
     */
    public void testIsValid(Object[] testObjects, long options) {
-      UrlValidator urlVal = new UrlValidator(null, null, options);
+      UrlValidator urlVal = new UrlValidator(null, null, options);	//line 257, UrlValidator.java
       assertTrue(urlVal.isValid("http://www.google.com"));
       assertTrue(urlVal.isValid("http://www.google.com/"));
       int statusPerLine = 60;

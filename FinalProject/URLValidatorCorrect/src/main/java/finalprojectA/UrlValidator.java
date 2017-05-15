@@ -257,7 +257,7 @@ public class UrlValidator implements Serializable {
     public UrlValidator(String[] schemes, RegexValidator authorityValidator, long options) {
         this.options = options;
 
-        if (isOn(ALLOW_ALL_SCHEMES)) {
+        if (isOn(ALLOW_ALL_SCHEMES)) {	//isOn line 490
             this.allowedSchemes = Collections.EMPTY_SET;
         } else {
             if (schemes == null) {
