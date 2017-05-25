@@ -20,10 +20,9 @@ public class CalDayTest {
   	 //construct new calendar day & Gregorian calendar
 	 	GregorianCalendar gregcal = new GregorianCalendar();
 	 	CalDay cal = new CalDay(gregcal);
-	 	 //assertions to get would be for current day test is ran
-	 	 //assertEquals(30, cal.getDay());
-		 //assertEquals(03, cal.getMonth());
-		 //assertEquals(2017, cal.getYear());
+	 	 assertEquals(gregcal.get(Calendar.DAY_OF_MONTH), cal.getDay());
+		 assertEquals(gregcal.get(Calendar.MONTH), cal.getMonth());
+		 assertEquals(gregcal.get(Calendar.YEAR), cal.getYear());
 	 }
 	/*
 	 *test 4 valid entries and 1 invalid entry, entries placed out of order 
@@ -39,10 +38,6 @@ public class CalDayTest {
 		 String description="This is my New Years party.";
 		 GregorianCalendar gregcal = new GregorianCalendar();
 	 	 CalDay cal = new CalDay(gregcal);
-	 	 //assertions to get would be for current day test is ran
-	 	 //assertEquals(30, cal.getDay());
-		 //assertEquals(03, cal.getMonth());
-		 //assertEquals(2017, cal.getYear());
 	 	 Appt appt = new Appt(
 	 		startHour, 
 	 		startMinute,
@@ -76,22 +71,22 @@ public class CalDayTest {
 	 		title,
 	 		description
 	 	);
-	 	 appt.getValid();
-	 	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(31);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Halloween Party");
-		 assertEquals("Halloween Party", appt.getTitle());
-		 appt.setDescription("This is my Halloween party.");
-		 assertEquals("This is my Halloween party.", appt.getDescription());         		
-	 	 assertEquals(true, appt.getValid());
+	 	 appt2.getValid();
+	 	 appt2.setStartHour(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMinute(30);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartDay(31);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMonth(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartYear(01);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setTitle("Halloween Party");
+		 assertEquals("Halloween Party", appt2.getTitle());
+		 appt2.setDescription("This is my Halloween party.");
+		 assertEquals("This is my Halloween party.", appt2.getDescription());         		
+	 	 assertEquals(true, appt2.getValid());
 	 	 Appt appt4 = new Appt(
 	 		startHour, 
 	 		startMinute,
@@ -101,22 +96,22 @@ public class CalDayTest {
 	 		title,
 	 		description
 	 	);
-	 	 appt.getValid();
-	 	 appt.setStartHour(17);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(31);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Halloween Party 2");
-		 assertEquals("Halloween Party 2", appt.getTitle());
-		 appt.setDescription("This is my Halloween party 2.");
-		 assertEquals("This is my Halloween party 2.", appt.getDescription());         		
-	 	 assertEquals(true, appt.getValid());
+	 	 appt4.getValid();
+	 	 appt4.setStartHour(17);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMinute(30);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartDay(31);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMonth(10);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartYear(01);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setTitle("Halloween Party 2");
+		 assertEquals("Halloween Party 2", appt4.getTitle());
+		 appt4.setDescription("This is my Halloween party 2.");
+		 assertEquals("This is my Halloween party 2.", appt4.getDescription());         		
+	 	 assertEquals(true, appt4.getValid());
 	 	 Appt appt5 = new Appt(
 	 		startHour, 
 	 		startMinute,
@@ -126,22 +121,22 @@ public class CalDayTest {
 	 		title,
 	 		description
 	 	);
-	 	 appt.getValid();
-	 	 appt.setStartHour(9);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(31);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Halloween Party 2");
-		 assertEquals("Halloween Party 2", appt.getTitle());
-		 appt.setDescription("This is my Halloween party 2.");
-		 assertEquals("This is my Halloween party 2.", appt.getDescription());         		
-	 	 assertEquals(true, appt.getValid());
+	 	 appt5.getValid();
+	 	 appt5.setStartHour(9);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setStartMinute(30);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setStartDay(31);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setStartMonth(10);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setStartYear(01);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setTitle("Halloween Party 2");
+		 assertEquals("Halloween Party 2", appt5.getTitle());
+		 appt5.setDescription("This is my Halloween party 2.");
+		 assertEquals("This is my Halloween party 2.", appt5.getDescription());         		
+	 	 assertEquals(true, appt5.getValid());
 	 	 Appt appt3 = new Appt(
 	 		startHour, 
 	 		startMinute,
@@ -151,22 +146,22 @@ public class CalDayTest {
 	 		title,
 	 		description
 	 	);
-	 	 appt.getValid();
-	 	 appt.setStartHour(24);
-		 assertEquals(false, appt.getValid());
-		 appt.setStartMinute(60);
-		 assertEquals(false, appt.getValid());
-		 appt.setStartDay(32);
-		 assertEquals(false, appt.getValid());
-		 appt.setStartMonth(13);
-		 assertEquals(false, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(false, appt.getValid());
-		 appt.setTitle(null);
-		 assertEquals("", appt.getTitle());
-		 appt.setDescription(null);
-		 assertEquals("", appt.getDescription());         		
-	 	 assertEquals(false, appt.getValid());
+	 	 appt3.getValid();
+	 	 appt3.setStartHour(24);
+		 assertEquals(false, appt3.getValid());
+		 appt3.setStartMinute(60);
+		 assertEquals(false, appt3.getValid());
+		 appt3.setStartDay(32);
+		 assertEquals(false, appt3.getValid());
+		 appt3.setStartMonth(13);
+		 assertEquals(false, appt3.getValid());
+		 appt3.setStartYear(01);
+		 assertEquals(false, appt3.getValid());
+		 appt3.setTitle(null);
+		 assertEquals("", appt3.getTitle());
+		 appt3.setDescription(null);
+		 assertEquals("", appt3.getDescription());         		
+	 	 assertEquals(false, appt3.getValid());
 	 	 cal.addAppt(appt);
 	 	 cal.addAppt(appt2);
 	 	 cal.addAppt(appt4);
@@ -236,22 +231,22 @@ public class CalDayTest {
 	 		title,
 	 		description
 	 	);
-	 	 appt.getValid();
-	 	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(31);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Halloween Party");
-		 assertEquals("Halloween Party", appt.getTitle());
-		 appt.setDescription("This is my Halloween party.");
-		 assertEquals("This is my Halloween party.", appt.getDescription());         		
-	 	 assertEquals(true, appt.getValid());
+	 	 appt2.getValid();
+	 	 appt2.setStartHour(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMinute(30);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartDay(31);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMonth(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartYear(01);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setTitle("Halloween Party");
+		 assertEquals("Halloween Party", appt2.getTitle());
+		 appt2.setDescription("This is my Halloween party.");
+		 assertEquals("This is my Halloween party.", appt2.getDescription());         		
+	 	 assertEquals(true, appt2.getValid());
 	 	 Appt appt4 = new Appt(
 	 		startHour, 
 	 		startMinute,
@@ -261,22 +256,22 @@ public class CalDayTest {
 	 		title,
 	 		description
 	 	);
-	 	 appt.getValid();
-	 	 appt.setStartHour(17);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(31);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Halloween Party 2");
-		 assertEquals("Halloween Party 2", appt.getTitle());
-		 appt.setDescription("This is my Halloween party 2.");
-		 assertEquals("This is my Halloween party 2.", appt.getDescription());         		
-	 	 assertEquals(true, appt.getValid());
+	 	 appt4.getValid();
+	 	 appt4.setStartHour(17);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMinute(30);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartDay(31);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMonth(10);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartYear(01);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setTitle("Halloween Party 2");
+		 assertEquals("Halloween Party 2", appt4.getTitle());
+		 appt4.setDescription("This is my Halloween party 2.");
+		 assertEquals("This is my Halloween party 2.", appt4.getDescription());         		
+	 	 assertEquals(true, appt4.getValid());
 	 	 Appt appt5 = new Appt(
 	 		startHour, 
 	 		startMinute,
@@ -286,22 +281,22 @@ public class CalDayTest {
 	 		title,
 	 		description
 	 	);
-	 	 appt.getValid();
-	 	 appt.setStartHour(9);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(31);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Halloween Party 2");
-		 assertEquals("Halloween Party 2", appt.getTitle());
-		 appt.setDescription("This is my Halloween party 2.");
-		 assertEquals("This is my Halloween party 2.", appt.getDescription());         		
-	 	 assertEquals(true, appt.getValid());
+	 	 appt5.getValid();
+	 	 appt5.setStartHour(9);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setStartMinute(30);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setStartDay(31);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setStartMonth(10);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setStartYear(01);
+		 assertEquals(true, appt5.getValid());
+		 appt5.setTitle("Halloween Party 2");
+		 assertEquals("Halloween Party 2", appt5.getTitle());
+		 appt5.setDescription("This is my Halloween party 2.");
+		 assertEquals("This is my Halloween party 2.", appt5.getDescription());         		
+	 	 assertEquals(true, appt5.getValid());
 	 	 //unable to format toString() correctly for assertion
 	 	 cal2.toString();
 	 	 cal2.addAppt(appt);

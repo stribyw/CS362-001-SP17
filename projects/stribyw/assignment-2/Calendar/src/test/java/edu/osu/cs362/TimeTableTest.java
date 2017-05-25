@@ -56,20 +56,20 @@ public class TimeTableTest {
 	 		startYear,
 	 		title,
 	 		description);
-	  	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(31);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Halloween Party");
-		 assertEquals("Halloween Party", appt.getTitle());
-		 appt.setDescription("This is my Halloween party.");
-		 assertEquals("This is my Halloween party.", appt.getDescription());
+	  	 appt2.setStartHour(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMinute(30);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartDay(31);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMonth(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartYear(01);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setTitle("Halloween Party");
+		 assertEquals("Halloween Party", appt2.getTitle());
+		 appt2.setDescription("This is my Halloween party.");
+		 assertEquals("This is my Halloween party.", appt2.getDescription());
 		 Appt appt3 = new Appt(startHour, 
 	 		startMinute,
 	 		startDay,
@@ -77,20 +77,20 @@ public class TimeTableTest {
 	 		startYear,
 	 		title,
 	 		description);
-	  	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(4);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(7);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("4th of July Party");
-		 assertEquals("4th of July Party", appt.getTitle());
-		 appt.setDescription("This is my 4th of July party.");
-		 assertEquals("This is my 4th of July party.", appt.getDescription());
+	  	 appt3.setStartHour(10);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartMinute(30);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartDay(4);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartMonth(7);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartYear(01);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setTitle("4th of July Party");
+		 assertEquals("4th of July Party", appt3.getTitle());
+		 appt3.setDescription("This is my 4th of July party.");
+		 assertEquals("This is my 4th of July party.", appt3.getDescription());
 		 Appt appt4 = new Appt(startHour, 
 	 		startMinute,
 	 		startDay,
@@ -98,20 +98,20 @@ public class TimeTableTest {
 	 		startYear,
 	 		title,
 	 		description);
-	  	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(25);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(12);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Christmas Party");
-		 assertEquals("Christmas Party", appt.getTitle());
-		 appt.setDescription("This is my Christmas party.");
-		 assertEquals("This is my Christmas party.", appt.getDescription());
+	  	 appt4.setStartHour(10);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMinute(30);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartDay(25);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMonth(12);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartYear(01);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setTitle("Christmas Party");
+		 assertEquals("Christmas Party", appt4.getTitle());
+		 appt4.setDescription("This is my Christmas party.");
+		 assertEquals("This is my Christmas party.", appt4.getDescription());
 	  	 LinkedList<Appt> appts = new LinkedList<Appt>();
 	  	 appts.add(appt3);
 	  	 appts.add(appt2);
@@ -123,6 +123,8 @@ public class TimeTableTest {
 	 	 gregcal2.add((GregorianCalendar.MONTH), 2);
 	 	 TimeTable timetable = new TimeTable();
 	 	 caldays = timetable.getApptRange(appts, gregcal, gregcal2);
+	 	 //appts = null;
+	 	 //appt = null;
 	 	 timetable.deleteAppt(appts, appt4);
 	 	 timetable.deleteAppt(appts, appt);
 	 	 timetable.deleteAppt(appts, appt2);
@@ -171,20 +173,20 @@ public class TimeTableTest {
 	 		startYear,
 	 		title,
 	 		description);
-	  	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(31);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Halloween Party");
-		 assertEquals("Halloween Party", appt.getTitle());
-		 appt.setDescription("This is my Halloween party.");
-		 assertEquals("This is my Halloween party.", appt.getDescription());
+	  	 appt2.setStartHour(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMinute(30);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartDay(31);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMonth(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartYear(01);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setTitle("Halloween Party");
+		 assertEquals("Halloween Party", appt2.getTitle());
+		 appt2.setDescription("This is my Halloween party.");
+		 assertEquals("This is my Halloween party.", appt2.getDescription());
 		 Appt appt3 = new Appt(startHour, 
 	 		startMinute,
 	 		startDay,
@@ -192,20 +194,20 @@ public class TimeTableTest {
 	 		startYear,
 	 		title,
 	 		description);
-	  	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(2);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(5);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(17);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("May Second");
-		 assertEquals("May Second", appt.getTitle());
-		 appt.setDescription("This is my May Second party.");
-		 assertEquals("This is my May Second party.", appt.getDescription());
+	  	 appt3.setStartHour(10);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartMinute(30);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartDay(2);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartMonth(5);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartYear(17);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setTitle("May Second");
+		 assertEquals("May Second", appt3.getTitle());
+		 appt3.setDescription("This is my May Second party.");
+		 assertEquals("This is my May Second party.", appt3.getDescription());
 		 Appt appt4 = new Appt(startHour, 
 	 		startMinute,
 	 		startDay,
@@ -213,20 +215,20 @@ public class TimeTableTest {
 	 		startYear,
 	 		title,
 	 		description);
-	  	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(1);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(5);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(17);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("May First");
-		 assertEquals("May First", appt.getTitle());
-		 appt.setDescription("This is my May First party.");
-		 assertEquals("This is my May First party.", appt.getDescription());
+	  	 appt4.setStartHour(10);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMinute(30);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartDay(1);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMonth(5);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartYear(17);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setTitle("May First");
+		 assertEquals("May First", appt4.getTitle());
+		 appt4.setDescription("This is my May First party.");
+		 assertEquals("This is my May First party.", appt4.getDescription());
 	  	 LinkedList<Appt> appts = new LinkedList<Appt>();
 	  	 appts.add(appt);
 	  	 appts.add(appt2);
@@ -241,13 +243,13 @@ public class TimeTableTest {
 	 	 appts.remove(appt);
 	 	 appts.remove(appt2);
 	 	 appts.remove(appt3);
-	 	 appts.remove(appt4);
+	 	 appts.remove(appt4);	 	 
+	 	 appt = null;
+	 	 //appts = null;
 	 	 timetable.deleteAppt(appts, appt);
 	 	 timetable.deleteAppt(appts, appt2);
 	 	 timetable.deleteAppt(appts, appt3);
 	 	 timetable.deleteAppt(appts, appt4);
-	 	 //below is attempt for null case of first if statement in deleteAppt(), does not work
-	 	 timetable.deleteAppt(appts, appt2);
 	 }
 	/*
 	 *test: making 1 appointment1, creating linked list & adding invalid appointments to it,
@@ -297,17 +299,18 @@ public class TimeTableTest {
 	 	 gregcal2.add((GregorianCalendar.MONTH), 2);
 	 	 TimeTable timetable = new TimeTable();
 	 	 caldays = timetable.getApptRange(appts, gregcal, gregcal2);
+	 	 //both line 124, only appt & appts = null line 124, but lines 126 & 127 not hit
+	 	 //with neither lines, lines 126 & 127 hit
+	 	 //appts = null;
+	 	 // appt = null;
 	 	 timetable.deleteAppt(appts, appt);
 	 }
 	/*
-	 *test: making 1 appointment1, creating linked list & adding invalid appointments to it,
-	 *creating to GregorianCalendars with one before the other in getApptRange,
-	 *and deleting appointments from linked list. Testing out of order Gregorian range. This creates 
-	 *a test failure. 
+	 * 
 	 */
 	 @Test
-	 public void test04() throws Throwable {
-	 	 int startHour=13;
+	  public void test04()  throws Throwable  {
+	  	 int startHour=13;
 		 int startMinute=30;
 		 int startDay=10;
 		 int startMonth=4;
@@ -342,20 +345,20 @@ public class TimeTableTest {
 	 		startYear,
 	 		title,
 	 		description);
-	  	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(31);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Halloween Party");
-		 assertEquals("Halloween Party", appt.getTitle());
-		 appt.setDescription("This is my Halloween party.");
-		 assertEquals("This is my Halloween party.", appt.getDescription());
+	  	 appt2.setStartHour(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMinute(30);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartDay(31);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartMonth(10);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setStartYear(01);
+		 assertEquals(true, appt2.getValid());
+		 appt2.setTitle("Halloween Party");
+		 assertEquals("Halloween Party", appt2.getTitle());
+		 appt2.setDescription("This is my Halloween party.");
+		 assertEquals("This is my Halloween party.", appt2.getDescription());
 		 Appt appt3 = new Appt(startHour, 
 	 		startMinute,
 	 		startDay,
@@ -363,20 +366,20 @@ public class TimeTableTest {
 	 		startYear,
 	 		title,
 	 		description);
-	  	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(4);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(7);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("4th of July Party");
-		 assertEquals("4th of July Party", appt.getTitle());
-		 appt.setDescription("This is my 4th of July party.");
-		 assertEquals("This is my 4th of July party.", appt.getDescription());
+	  	 appt3.setStartHour(10);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartMinute(30);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartDay(2);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartMonth(5);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setStartYear(17);
+		 assertEquals(true, appt3.getValid());
+		 appt3.setTitle("May Second");
+		 assertEquals("May Second", appt3.getTitle());
+		 appt3.setDescription("This is my May Second party.");
+		 assertEquals("This is my May Second party.", appt3.getDescription());
 		 Appt appt4 = new Appt(startHour, 
 	 		startMinute,
 	 		startDay,
@@ -384,31 +387,40 @@ public class TimeTableTest {
 	 		startYear,
 	 		title,
 	 		description);
-	  	 appt.setStartHour(10);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMinute(30);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartDay(25);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartMonth(12);
-		 assertEquals(true, appt.getValid());
-		 appt.setStartYear(01);
-		 assertEquals(true, appt.getValid());
-		 appt.setTitle("Christmas Party");
-		 assertEquals("Christmas Party", appt.getTitle());
-		 appt.setDescription("This is my Christmas party.");
-		 assertEquals("This is my Christmas party.", appt.getDescription());
+	  	 appt4.setStartHour(10);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMinute(30);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartDay(1);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartMonth(5);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setStartYear(17);
+		 assertEquals(true, appt4.getValid());
+		 appt4.setTitle("May First");
+		 assertEquals("May First", appt4.getTitle());
+		 appt4.setDescription("This is my May First party.");
+		 assertEquals("This is my May First party.", appt4.getDescription());
 	  	 LinkedList<Appt> appts = new LinkedList<Appt>();
-	  	 appts.add(appt3);
-	  	 appts.add(appt2);
 	  	 appts.add(appt);
+	  	 appts.add(appt2);
+	  	 appts.add(appt3);
 	  	 appts.add(appt4);
 	  	 LinkedList<CalDay> caldays = new LinkedList<CalDay>();
 		 GregorianCalendar gregcal = new GregorianCalendar();
 	 	 GregorianCalendar gregcal2 = new GregorianCalendar();
 	 	 gregcal2.add((GregorianCalendar.MONTH), 2);
 	 	 TimeTable timetable = new TimeTable();
-	 	 caldays = timetable.getApptRange(appts, gregcal2, gregcal);
+	 	 caldays = timetable.getApptRange(appts, gregcal, gregcal2);
+	 	 appts.remove(appt);
+	 	 appts.remove(appt2);
+	 	 appts.remove(appt3);
+	 	 appts.remove(appt4);	 	 
+	 	 //appt = null;
+	 	 appts = null;
 	 	 timetable.deleteAppt(appts, appt);
+	 	 timetable.deleteAppt(appts, appt2);
+	 	 timetable.deleteAppt(appts, appt3);
+	 	 timetable.deleteAppt(appts, appt4);
 	 }
 }
