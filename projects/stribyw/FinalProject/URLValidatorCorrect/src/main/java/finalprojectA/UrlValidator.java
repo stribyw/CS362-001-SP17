@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package finalprojectA;
 
 import java.io.Serializable;
@@ -256,7 +257,7 @@ public class UrlValidator implements Serializable {
     public UrlValidator(String[] schemes, RegexValidator authorityValidator, long options) {
         this.options = options;
 
-        if (isOn(ALLOW_ALL_SCHEMES)) {	//isOn line 490
+        if (isOn(ALLOW_ALL_SCHEMES)) {
             this.allowedSchemes = Collections.EMPTY_SET;
         } else {
             if (schemes == null) {

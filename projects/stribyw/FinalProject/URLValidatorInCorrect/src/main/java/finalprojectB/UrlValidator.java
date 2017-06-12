@@ -14,14 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package finalprojectA;
+package finalprojectB;
 
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.regex.Matcher;
+import java.util.regex.Matcher; //used to search through a text for multiple occurrences of a regular expression
 import java.util.regex.Pattern;
 
 /**
@@ -106,7 +106,7 @@ public class UrlValidator implements Serializable {
      */
     private static final String URL_REGEX =
             "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?";
-    //                                                                      12            3  4          5       6   7        8 9
+    //        12            3  4          5       6   7        8 9
     private static final Pattern URL_PATTERN = Pattern.compile(URL_REGEX);
 
     /**
@@ -147,15 +147,15 @@ public class UrlValidator implements Serializable {
 
     private static final String PATH_REGEX = "^(/[-\\w:@&?=+,.!/~*'%$_;\\(\\)]*)?$";
     private static final Pattern PATH_PATTERN = Pattern.compile(PATH_REGEX);
-
+    
     private static final String QUERY_REGEX = "^(.*)$";
-
+    
     private static final Pattern QUERY_PATTERN = Pattern.compile(QUERY_REGEX);
 
     private static final String LEGAL_ASCII_REGEX = "^\\p{ASCII}+$";
     private static final Pattern ASCII_PATTERN = Pattern.compile(LEGAL_ASCII_REGEX);
 
-    private static final String PORT_REGEX = "^:(\\d{1,5})$";
+    private static final String PORT_REGEX = "^:(\\d{1,3})$";
     private static final Pattern PORT_PATTERN = Pattern.compile(PORT_REGEX);
 
     /**
@@ -256,7 +256,7 @@ public class UrlValidator implements Serializable {
     public UrlValidator(String[] schemes, RegexValidator authorityValidator, long options) {
         this.options = options;
 
-        if (isOn(ALLOW_ALL_SCHEMES)) {	//isOn line 490
+        if (isOn(ALLOW_ALL_SCHEMES)) {
             this.allowedSchemes = Collections.EMPTY_SET;
         } else {
             if (schemes == null) {
@@ -281,23 +281,23 @@ public class UrlValidator implements Serializable {
         if (value == null) {
             return false;
         }
-
-        if (!ASCII_PATTERN.matcher(value).matches()) {
+                                                        //private static final String LEGAL_ASCII_REGEX = "^\\p{ASCII}+$";
+        if (!ASCII_PATTERN.matcher(value).matches()) {  //private static final Pattern ASCII_PATTERN = Pattern.compile(LEGAL_ASCII_REGEX);
             return false;
         }
 
-        // Check the whole url address structure
-        Matcher urlMatcher = URL_PATTERN.matcher(value);
+        // Check the whole url address structure            //private static final String URL_REGEX = "^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\\?([^#]*))?(#(.*))?";
+        Matcher urlMatcher = URL_PATTERN.matcher(value);    //private static final Pattern URL_PATTERN = Pattern.compile(URL_REGEX);
         if (!urlMatcher.matches()) {
             return false;
         }
 
-        String scheme = urlMatcher.group(PARSE_URL_SCHEME);
+        String scheme = urlMatcher.group(PARSE_URL_SCHEME);     //private static final int PARSE_URL_SCHEME = 2;
         if (!isValidScheme(scheme)) {
             return false;
         }
 
-        String authority = urlMatcher.group(PARSE_URL_AUTHORITY);
+        String authority = urlMatcher.group(PARSE_URL_AUTHORITY);   //private static final int PARSE_URL_AUTHORITY = 4;
         if ("file".equals(scheme) && "".equals(authority)) {
            // Special case - file: allows an empty authority
         } else {
@@ -307,15 +307,15 @@ public class UrlValidator implements Serializable {
             }
         }
 
-        if (!isValidPath(urlMatcher.group(PARSE_URL_PATH))) {
+        if (!isValidPath(urlMatcher.group(PARSE_URL_PATH))) {       //private static final int PARSE_URL_PATH = 5;
             return false;
         }
 
-        if (!isValidQuery(urlMatcher.group(PARSE_URL_QUERY))) {
+        if (!isValidQuery(urlMatcher.group(PARSE_URL_QUERY))) {     //private static final int PARSE_URL_QUERY = 7;
             return false;
         }
 
-        if (!isValidFragment(urlMatcher.group(PARSE_URL_FRAGMENT))) {
+        if (!isValidFragment(urlMatcher.group(PARSE_URL_FRAGMENT))) {       //private static final int PARSE_URL_FRAGMENT = 9;
             
         	return false;
         	
@@ -442,8 +442,8 @@ public class UrlValidator implements Serializable {
         if (query == null) {
             return true;
         }
-
-        return QUERY_PATTERN.matcher(query).matches();
+        
+        return !QUERY_PATTERN.matcher(query).matches();
     }
 
     /**
